@@ -1,0 +1,18 @@
+<script type="text/javascript">
+  window.onload=getinfo;
+  var request;
+  function getinfo(){
+    request=new XMLHttpRequest();
+    request.open("post","requests/getInfo.php");
+    request.onreadystatechange=refresh;
+    request.send(null);
+  }
+  function refresh(){
+    var text=request.responseText;
+    var json=JSON.parse(text);
+    console.log(json.response[0].first_name);
+  }
+</script>
+<ul>
+
+</ul>

@@ -1,0 +1,7 @@
+Options -Indexes
+
+Options +MultiViews
+
+ErrorDocument 404 /page.php
+
+ErrorDocument 403 /errors/error403

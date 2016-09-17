@@ -1,0 +1,177 @@
+body{
+	min-width:1000px;
+}
+#submit_token{
+	background-image:linear-gradient(#f4da71,#cca509);
+	border-radius:50%;
+}
+#submit_token:hover{
+	background-image:linear-gradient(#cca509,#f4da71);
+}
+#submit_token:active{
+	transform: translatey(3px);
+}
+#reset_token:active{
+	transform: translatey(3px);
+}
+.form_button{
+	font-style:italic;
+	font-size:14px;
+	width:140px;
+	height:30px;
+	font-family:Sans-Serif;
+	border-radius:10px;
+	cursor:pointer;
+}
+#reset_token{
+	background-image:linear-gradient(#bf1e2e,#f58f99);
+	border-radius: 0 40px 0 0;
+}
+
+#reset_token:hover{
+	background-image:linear-gradient(#f58f99,#bf1e2e);
+}
+#tokeninput{
+
+	border-radius:12px;
+}
+#token_send{
+	position:absolute;
+	top:5%;
+	left:20%;
+	background-color:rgba(96,96,96,.7);
+	padding-left:10px;
+}
+#accaunts{
+	cursor:pointer;
+	margin-left:35%;
+	margin-top:14%;
+	font-size:18px;
+	font-family:Sans-Serif;
+	background-color:#ccc;
+	box-shadow:1px 3px 2px 4px rgba(0,240,0,.4);
+}
+.accRemove{
+	padding-left:20px;
+	color:red;
+	font-size:15px;
+	font-style:italic;
+}
+.accRemove:hover{
+	text-decoration: underline;
+}
+.accaunt>a{
+	text-decoration:none;
+	color:blue;
+}
+.accaunt>a:hover{
+	text-decoration:underline;
+}
+#status{
+	margin-left:10%;
+	margin-right:10%;
+	text-shadow:red 1px 0.5px 0;
+	font-family:sans-serif;
+}
+#mainmenu{
+
+	list-style:none;
+	margin:0;
+	padding:0;
+	background-image:linear-gradient(to left,rgba(120,100,200,.5),rgba(120,100,150,.5));
+	border-bottom:2px solid black;
+}
+#mainmenu div{
+	display:inline-block;
+	margin-left:10%;
+	margin-right:0px;
+	height: 50px;
+}
+#mainmenu a{
+	display:inline-block;
+	font-style:italic;
+	text-align:center;
+	height:40px;
+	width:120px;
+	padding-left:5px;
+
+	font-family:sans-serif;
+
+}
+#mainmenu li{
+	text-align:center;
+	display:inherit;
+	transform:skewX(-45deg);
+
+	width:120px;
+}
+#mainmenu li:hover{
+	box-shadow:-4px -4px rgba(255,0,0,.8);
+	
+}
+#mainmenu li:active{
+	background:orange;
+
+}
+
+#mainmenu p{
+transform:skewX(45deg);
+}
+#mainmenu a{
+	text-decoration:none;
+	color:white;
+}
+
+#blacklistli{
+	background-color:rgba(0,0,150,.5);
+}
+#messagesli{
+	background-color:rgba(150,0,0,.5);
+}
+#groupli{
+	background-color:rgba(0,150,0,.5);
+}
+#friendsli{
+	background-color:rgba(150,150,0,.5);
+}
+#mainpageli{
+	background-color:rgba(0,150,150,.5);
+}
+#logoutli{
+  position:float;
+	float:right;
+margin-right: 5%;
+
+}
+#logoutli a{
+	 color:black;
+text-decoration:none;
+}
+#logoutli a:hover{
+	text-decoration:underline;
+}
+#topinfo{
+		height: 20px;
+		background-color:#666;
+}
+#linkonprofil{
+	padding-left:10px;
+	text-decoration:none;
+	color:rgba(0,0,240,.8);
+}
+#linkonprofil:hover{
+	text-decoration:underline;
+}
+#online,#offline{
+	text-decoration:none;
+	padding-left:10px;
+}
+#online{
+	color:rgba(0,240,0,.8);
+}
+#offline{
+	color:rgba(240,0,0,.8);
+}
+#online:hover,#offline:hover{
+	text-decoration:underline;
+}

@@ -1,0 +1,26 @@
+<?php
+session_start();
+define("WIDTH",100);
+define("HEIGHT",40);
+define("NUMCHARS",6);
+$pass_phrase="";
+for($i=0;$i<NUMCHARS;$i++){
+	$pass_phrase.=chr(rand(97,122));
+}
+$_SESSION['pass_phrase']=md5($pass_phrase);
+$img=imagecreatetruecolor(WIDTH,HEIGHT);
+$bg_color=imagecolorallocate($img,255,255,255);
+$text_color=imagecolorallocate($img,0,0,0);
+$graphic_color=imagecolorallocate($img,100,100,100);
+imagefilledrectangle($img,0,0,WIDTH,HEIGHT,$bg_color);
+for($i=0;$i<5;$i++){
+	imageline($img,0,rand()%HEIGHT,WIDTH,rand()%HEIGHT,$graphic_color);
+}
+for($i=0;$i<50;$i++){
+	imagesetpixel($img,rand()%WIDTH,rand()%HEIGHT,$graphic_color);
+}
+imagestring($img,30,12,18,$pass_phrase,$text_color);
+header("Content-type:image/png");
+imagepng($img);
+imagedestroy($img);
+?>
