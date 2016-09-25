@@ -32,8 +32,6 @@ if(isset($_SESSION['who'])){
 	$_SESSION['title']=$name." ".$surname;
 	$_SESSION['id']=$uri;
 	include("html/main.php");
-
-	echo $token;
 	exit();
 }
 }

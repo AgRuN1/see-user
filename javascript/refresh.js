@@ -10,7 +10,6 @@ function refresh(){
 function addRefresh(){
 	if(request.readyState==4){
 	var text=request.responseText;
-	console.log(text);
 	var json=JSON.parse(text);
 	var accaunts=json.response.accaunt;
 	var tbody=document.createElement("tbody");
@@ -39,10 +38,14 @@ function addRefresh(){
 		id.appendChild(document.createTextNode(accaunt.id));
 		id.setAttribute("style","display:none");
 		var tdrem=document.createElement("td");
-		tdrem.appendChild(document.createTextNode("Delete"));
+		var irem=document.createElement("i");
+		irem.setAttribute("class","fa fa-trash-o");
+
+		tdrem.appendChild(irem);
 		tdrem.appendChild(id);
 		tdrem.setAttribute("class","accRemove");
-		tdrem.setAttribute("onclick","removeAcc(this.previousElementSibling)");
+			tdrem.setAttribute("title","Удалить");
+
 		tr.appendChild(td);
 		tr.appendChild(id);
 		tr.appendChild(tdrem);
@@ -59,11 +62,16 @@ function addRefresh(){
 	var table=document.getElementById("accaunts");
 	var oldbody=table.getElementsByTagName("tbody")[0];
 	table.replaceChild(tbody,oldbody);
+	$(".accRemove").tipTip({defaultPosition:"right"});
+	$(".accRemove").click(function(){
+		$(this).trigger('mouseout');
+		removeAcc($(this).prev());
+	});
 	}
 	}
 function removeAcc(obj){
-	var id=obj.firstChild.nodeValue;
-	obj.parentNode.style.opacity="0";
+	var id=obj.text();
+	obj.parent().replaceWith("<tr style='text-align:center'><i class='fa fa-spin fa-spinner'></i></tr>");
 	var requests=new XMLHttpRequest();
 	var urli="/sql/remove.php?id="+id;
 	requests.open("get",urli,true);

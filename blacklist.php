@@ -14,13 +14,9 @@ $token=$_SESSION['who'];
     <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
 <link rel="shortcut icon" href="../favi.ico" type="image/x-icon">
 <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
-<style>
-#blacklistli{
-	background-image:linear-gradient(-150deg,rgba(0,0,230,.7) 0,rgba(0,0,230,.7) 25% ,transparent 0);
-}
-</style>
+<link href="font-awesome-4.6.3/css/font-awesome.css" rel="stylesheet" type="text/css" media="screen" />
 <script type="text/javascript" src="javascript/throwerrors.js"></script>
-<title>Blacklist</title>
+<title>Черный список</title>
 </head>
 <body>
 <?php
@@ -30,13 +26,13 @@ include("html/nav.php");
 ?>
 <form id="add_blacklist">
 <br>
-<input type="text" placeholder="user id" maxlength="10" size="10" id="idban"onfocus="maxsize();"onblur="minsize();"><br><br>
-<input type="button" value="Ban user" id="banuser"class="form_button">
+<input type="text" placeholder="id" maxlength="10" size="10" id="idban"onfocus="maxsize();"onblur="minsize();"><br><br>
+<input type="button" value="Заблокировать" id="banuser"class="form_button">
 </form>
 <table id="bannedusers">
 <thead>
 </thead>
-<caption>Users</caption>
+<caption>Пользователи</caption>
 <tbody>
 
 </tbody>

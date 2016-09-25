@@ -1,6 +1,6 @@
 function errors(number){
 	switch (number){
-		case 0: 
+		case 0:
 		return "No tokens";
 		case 1:
 		return "Unknown error";
@@ -11,9 +11,9 @@ function errors(number){
 		case 4:
 		return "Unknown signature";
 		case 5:
-		return "Authorization fails";
+		return "Ошибка авторизации";
 		case 6:
-		return "Too many requests";
+		return "Слишком много запросов";
 		case 7:
 		return "No allowed";
 		case 8:
@@ -32,7 +32,7 @@ function errors(number){
 		return "Require HTTPS";
 		case 17:
 		return "Require to valid user";
-		case 18: 
+		case 18:
 		return "Page deleted or banned";
 		case 111:
 		return "Unknown user's id";
